@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    
+    <div class="m-5 p-5 border border-primary">
+        <div id="typed-strings">
+            <p>Typed.js is a <strong>JavaScript</strong> library.</p>
+            <p>It <em>types</em> out sentences.</p>
+          </div>
+          <span id="typed"></span>
+    </div>
+
+    <div class="m-5 p-5 border border-secondary">
+        <h1>
+            You are <span id="text"></span>
+        </h1>
+    </div>
+
+
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./node_modules/typed.js/lib/typed.min.js"></script>
+    <script>
+        var typed = new Typed('#typed', {
+          stringsElement: '#typed-strings'
+        });
+
+        new Typed("#text",{
+            strings :[
+                'a<span class="text-warning"> reason.</span>',
+                'just a<span class="text-primary"> dream!</span>',
+            ],
+            typeSpeed:200,
+            backSpeed:100,
+            loop:true
+        })
+
+    </script>
+</body>
+</html>
