@@ -11,11 +11,7 @@
 <body>
     
     <div class="vh-100 p-5 border border-primary">
-        <h1 class="animate__animated">I'm trying</h1>
-        <p class="animate__animated">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, placeat. Harum nisi, eius deserunt quaerat accusantium unde ipsam nobis aspernatur quibusdam quo magni id reiciendis sed. Rerum tempore non debitis!
-        </p>
-        <!-- <nav class="navbar navbar-expand-lg w-100 top-0 animate__animated bg-light">
+        <nav class="navbar navbar-expand-lg w-100 top-0 animate__animated bg-light">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">Navbar</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,38 +46,38 @@
                 </form>
               </div>
             </div>
-          </nav> -->
+          </nav>
     </div>
-    <div class="vh-100 p-5 bg-secondary border border-primary" id="obj">
-        <h1 class="animate__animated">To be a</h1>
-        <p class="animate__animated">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, placeat. Harum nisi, eius deserunt quaerat accusantium unde ipsam nobis aspernatur quibusdam quo magni id reiciendis sed. Rerum tempore non debitis!
-        </p>
+    <div class="vh-100 p-5 bg-secondary border border-primary">
+       
     </div>
     <div class="vh-100  p-5 border border-primary">
-        <h1 class="animate__animated">Rich Guy</h1>
-        <p class="animate__animated">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, placeat. Harum nisi, eius deserunt quaerat accusantium unde ipsam nobis aspernatur quibusdam quo magni id reiciendis sed. Rerum tempore non debitis!
-        </p>
+        
+    </div>
+    <div class="vh-100  p-5 border border-primary bg-primary last">
+      <h1 class="counter">1,123,456.78</h1>
     </div>
 
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./node_modules/waypoints/lib/noframework.waypoints.min.js"></script>
+    <script src="./node_modules/counterup2/dist/index.js"></script>
     <script>
-        let navBar =document.querySelector(".navbar")
-        let h1 = document.querySelectorAll(".animate__animated")
 
-        h1.forEach(function(currentH1){
-            new Waypoint({
-                element : currentH1,
-                handler :function(direction){
-                    if(direction === "down"){
-                        currentH1.classList.add("animate__slideInDown")
-                    }
-                },
-                offset : "100%"
-            })
-        })
+      const  counterUp  = window.counterUp.default
+
+      const el = document.querySelector( '.counter' )
+
+
+      new Waypoint({
+        element:document.querySelector(".last"),
+        handler : function(){
+          counterUp( el, {
+              duration: 5000,
+              delay: 16,
+          } )
+        },
+        offset: "75%"
+      })
 
     </script>
 </body>
