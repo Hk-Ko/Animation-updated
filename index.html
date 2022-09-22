@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css">
     <link rel="stylesheet" href="./node_modules/glider-js/glider.min.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 <body>
 
@@ -48,17 +48,45 @@
       </div>
     </nav>
 
-    <div class="vh-100 p-5 border border-primary">
+    <!-- <div class="vh-100 p-5 border border-primary">
     </div>
     <div class="vh-100 p-5 bg-secondary border border-primary">
     </div>
     <div class="vh-100  p-5 border border-primary">
+    </div> -->
+
+    <div class="m-5 p-5">
+      <div class="glider-contain">
+        <div class="glider">
+          <h1 class="bg-primary p-5 text-center"> 1 </h1>
+          <h1 class="bg-secondary p-5 text-center"> 2 </h1>
+          <h1 class="bg-success p-5 text-center"> 3 </h1>
+          <h1 class="bg-info p-5 text-center"> 4 </h1>
+          <h1 class="bg-danger p-5 text-center"> 5 </h1>
+          <h1 class="bg-warning p-5 text-center"> 6 </h1>
+        </div>
+          <button aria-label="Previous" class="glider-prev">
+            <i class="bi bi-arrow-left"></i>
+          </button>
+          <button aria-label="Next" class="glider-next">
+            <i class="bi bi-arrow-right"></i>
+          </button>
+        <div role="tablist" class="dots"></div>
+      </div>
     </div>
 
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./node_modules/glider-js/glider.min.js"></script>
     <script>
-
+        new Glider(document.querySelector(".glider"),{
+          slidesToShow: 3,
+          dots : '.dots',
+          arrows: {
+            prev: '.glider-prev',
+            // may also pass element directly
+            next: '.glider-next',
+          },
+        });
     </script>
 </body>
 </html>
